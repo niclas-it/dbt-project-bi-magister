@@ -1,0 +1,55 @@
+
+version: 2
+
+models:
+    - name: sales
+      description: "Tabla de hechos"
+      columns:
+          - name: date_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: total_sales
+          - name: product_id
+          - name: customer_id
+          - name: quantity
+          - name: store_id
+          - name: unit_price
+
+    - name: dates
+      description: "dimension fecha"
+      columns:
+          - name: date_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: month_name
+          - name: quarter
+          - name: year
+          - name: day
+          - name: is_weekend
+          - name: weekday_name
+          - name: week_date
+            description: "fecha de inicio de la semana"
+
+
+    - name: customers
+      description: "dimension cliente"
+      columns:
+          - name: customer_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: customer_name
+          - name: sex
+          - name: region
+          - name: join_date
+          - name: nationality
+          - name: age
+
+
+            
+
