@@ -51,5 +51,13 @@ models:
           - name: age
 
 
-            
+    - name: reporte2
+      description: "reporte 2"
+      columns:
+          - name: customer_id            
+          - name: qty_sales
+          - name: year
+          - name: month
+          - name: month_name
+          - name: year_month                     
 
